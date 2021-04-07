@@ -66,6 +66,9 @@ VOLUME /vault/file
 # 8200/tcp is the primary interface that applications use to interact with
 # Vault.
 EXPOSE 8200
+# 8201/tcp is the cluster interface that vault uses internally to interact
+# with other Vault nodes
+EXPOSE 8201
 
 # The entry point script uses dumb-init as the top-level process to reap any
 # zombie processes created by Vault sub-processes.
